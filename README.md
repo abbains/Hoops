@@ -1,7 +1,7 @@
 # Hoops
 
-##Ionic 4
-##Angular 6
+## Ionic 4
+### Angular 6
 
 ## Authors
 
