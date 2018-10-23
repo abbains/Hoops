@@ -17,12 +17,12 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 // database connection
 
 const config = {
-    apiKey: 'AIzaSyDNG5NGQ613nZH-ozIiwOVjHYOgeB6SxcM',
-    authDomain: 'hoopsphere-72a9a.firebaseapp.com',
-    databaseURL: 'https://hoopsphere-72a9a.firebaseio.com',
+    apiKey: 'your API',
+    authDomain: 'your domain',
+    databaseURL: 'db url',
     projectId: 'hoopsphere-72a9a',
-    storageBucket: 'hoopsphere-72a9a.appspot.com',
-    messagingSenderId: '847253400342'
+    storageBucket: 'your bucket',
+    messagingSenderId: 'SenderID'
 };
 
 @NgModule({
