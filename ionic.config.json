@@ -1,0 +1,7 @@
+{
+  "name": "hoopsphere",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

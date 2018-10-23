@@ -1,0 +1,58 @@
+
+* {
+  text-shadow: 1px 1px 1px #81a4e8;
+  text-align: center;
+  font-family: futura-lt-w01-book, sans-serif;
+  font-size: 20px;
+
+}
+
+.card-background-page {
+  background: linear-gradient(#8e9eab, #eef2f3);
+}
+
+img {
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+
+.card-title {
+  margin-top: 15%;
+  width: 100%;
+  font-weight: bold;
+  font-size: 35px;
+  color: #3e3e3e;
+  text-shadow: 1px 1px 1px #000;
+  background: -webkit-linear-gradient(#000aee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.linktoregister {
+  text-decoration: underline;
+  font-family: sans-serif;
+  color: #000000;
+  text-shadow: 1px 1px 1px #81a4e8;
+}
+
+button {
+  text-shadow: 1px 2px 1px #81a4e8;
+  background: -webkit-linear-gradient(#000aee, #333);
+  -webkit-background-clip: text;
+}
+
+p {
+  font-family: sans-serif;
+  width: 100%;
+  color: #000000;
+  text-shadow: 1px 1px 1px #81a4e8;
+  padding: 5%;
+  background: -webkit-linear-gradient(#000aee, #333);
+  -webkit-background-clip: text;
+}
+
+.footer {
+  padding: 1px;
+
+}

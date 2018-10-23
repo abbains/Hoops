@@ -1,0 +1,98 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Register
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="back">
+    <ion-card class="card-background-page">
+        <div id="imgwrap">
+            <img
+                    src="https://static.wixstatic.com/media/ca7d68_a7cf1cc9e4f0439cb629dde04570a9b3~mv2.png/v1/fill/w_188,h_188,al_c,q_80,usm_0.66_1.00_0.01/ca7d68_a7cf1cc9e4f0439cb629dde04570a9b3~mv2.webp"/>
+        </div>
+
+    </ion-card>
+    <form [formGroup]="register" (ngSubmit)="registerForm()">
+        <ion-item>
+            <ion-label>Please select your child age</ion-label>
+            <ion-select formControlName="age" value="1999" ok-text="Okay" cancel-text="Dismiss">
+                <ion-select-option value="1999">1999</ion-select-option>
+                <ion-select-option value="2000">2000</ion-select-option>
+                <ion-select-option value="2001">2001</ion-select-option>
+                <ion-select-option value="2002">2002</ion-select-option>
+                <ion-select-option value="2003">2003</ion-select-option>
+                <ion-select-option value="2004">2004</ion-select-option>
+                <ion-select-option value="2005">2005</ion-select-option>
+                <ion-select-option value="2006">2006</ion-select-option>
+                <ion-select-option value="2007">2007</ion-select-option>
+                <ion-select-option value="2008">2008</ion-select-option>
+                <ion-select-option value="2009">2009</ion-select-option>
+                <ion-select-option value="2010">2010</ion-select-option>
+                <ion-select-option value="2011">2011</ion-select-option>
+                <ion-select-option value="2012">2012</ion-select-option>
+                <ion-select-option value="2013">2013</ion-select-option>
+                <ion-select-option value="2014">2014</ion-select-option>
+                <ion-select-option value="2015">2015</ion-select-option>
+                <ion-select-option value="2016">2016</ion-select-option>
+                <ion-select-option value="2017">2017</ion-select-option>
+                <ion-select-option value="2018">2018</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <div class="error" *ngIf="register.get('age').touched && !register.controls.age.valid">
+            Please select year
+        </div>
+
+        <ion-item>
+            <ion-label>Please select your child skill level</ion-label>
+            <ion-select formControlName="skill" value="Beginner" ok-text="Okay" cancel-text="Dismiss">
+                <ion-select-option value="beginner">Beginner</ion-select-option>
+                <ion-select-option value="intermediate">Intermediate</ion-select-option>
+                <ion-select-option value="advance">Advance</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <div class="error" *ngIf="register.get('skill').touched && !register.controls.skill.valid">
+            Please select skill
+        </div>
+
+        <div>
+            <ion-item>
+                <ion-label style="text-align: left">Male</ion-label>
+                <ion-checkbox formControlName="male" color="secondary">Male</ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label style="text-align: left">Female</ion-label>
+                <ion-checkbox formControlName="female" color="secondary">Female</ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" formControlName="name" placeholder="Name" style="text-align: left"></ion-input>
+            </ion-item>
+            <div class="error" *ngIf="register.get('name').touched &&!register.controls.name.valid">
+                Please select valid name. for eg: John Doe
+            </div>
+            <ion-item>
+                <ion-input type="email" placeholder="email" formControlName="email"
+                           style="text-align: left"></ion-input>
+            </ion-item>
+            <div class="error" *ngIf="register.get('email').touched && !register.controls.email.valid">
+                Please enter a valid email.For eg: John@email.com
+            </div>
+            <ion-item>
+                <ion-input formControlName="phone" type="text" placeholder="Phone Number"
+                           style="text-align: left"></ion-input>
+            </ion-item>
+            <div class="error" *ngIf="register.get('phone').touched && !register.controls.phone.valid">
+                Please enter a valid Phone. For eg: ###-###-####
+            </div>
+        </div>
+        <ion-button shape="round" ion-button round color="secondary" type="submit" [disabled]="!register.valid">
+            Register
+        </ion-button>
+
+    </form>
+
+</ion-content>

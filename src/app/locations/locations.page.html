@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Locations
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <img src="https://s3-media1.fl.yelpcdn.com/bphoto/TnvQieYyMNv9Ttab4v6-iA/o.jpg"/>
+    <h4 class="card-title">{{location.address.address1.name}}</h4>
+    <div class="card-subtitle">{{location.address.address1.place}}</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://s3-media1.fl.yelpcdn.com/bphoto/5QN8c_7F7A8-BcEcPpx8mg/o.jpg"/>
+    <h4 class="card-title">{{location.address.address2.name}}</h4>
+    <div class="card-subtitle">{{location.address.address2.place}}</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://s3-media2.fl.yelpcdn.com/bphoto/U8c96nxD0GVW9FRKEjMeVA/l.jpg"/>
+    <h4 class="card-title">{{location.address.address3.name}}</h4>
+    <div class="card-subtitle">{{location.address.address3.place}}</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://s3-media3.fl.yelpcdn.com/bphoto/v65r3Cx_rBY2dl0nY2cLmg/o.jpg"/>
+    <h4 class="card-title">{{location.address.address4.name}}</h4>
+    <div class="card-subtitle">{{location.address.address4.place}}</div>
+  </ion-card>
+</ion-content>

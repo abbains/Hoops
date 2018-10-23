@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Contact
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card class="card-background-page">
+        <div >
+            <img
+                    src="https://static.wixstatic.com/media/ca7d68_a7cf1cc9e4f0439cb629dde04570a9b3~mv2.png/v1/fill/w_188,h_188,al_c,q_80,usm_0.66_1.00_0.01/ca7d68_a7cf1cc9e4f0439cb629dde04570a9b3~mv2.webp"/>
+        </div>
+
+    </ion-card>
+    <h5>{{object.question}}</h5>
+    <h5>{{object.email}}</h5>
+    <h5>{{object.call}}</h5>
+    <br>
+    <h5>Send us a message below</h5>
+    <br>
+    <form [formGroup]="contact" (ngSubmit)="contactForm()" id="form">
+        <ion-item>
+            <ion-input type="text" formControlName="parentfullname" placeholder="Parent Name" style="text-align: left"></ion-input>
+        </ion-item>
+        <div class="error" *ngIf="contact.get('parentfullname').touched && !contact.controls.parentfullname.valid">
+            Please enter a valid Name. For eg: John Doe.
+        </div>
+        <ion-item>
+            <ion-input type="email" formControlName="email" placeholder="@email.com" style="text-align: left"></ion-input>
+        </ion-item>
+
+            <div class="error" *ngIf="contact.get('email').touched && !contact.controls.email.valid ">
+                Please enter a valid email. For eg: john@email.com
+            </div>
+
+        <ion-item>
+            <ion-input type="text" formControlName="studentFullname" placeholder="Student Name" style="text-align: left" ></ion-input>
+        </ion-item>
+        <div class="error" *ngIf=" contact.get('studentFullname').touched && !contact.controls.studentFullname.valid ">
+            Please enter a valid email. For eg: John Doe.
+        </div>
+        <ion-item>
+            <ion-input type="text" formControlName="number" placeholder="Phone" style="text-align: left"></ion-input>
+        </ion-item>
+        <div class="error" *ngIf="contact.get('number').touched &&!contact.controls.number.valid ">
+            Please enter a valid Phone. For eg: ###-###-####
+        </div>
+        <ion-item>
+            <ion-label style="text-align: left">Date</ion-label>
+            <ion-datetime formControlName="age" display-format="MM/DD/YYYY" ></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-textarea formControlName="message" placeholder="Any Message" style="text-align: left"></ion-textarea>
+        </ion-item>
+        <ion-button shape="round" type="submit" [disabled]="!contact.valid" ion-button round color="secondary" style="text-align: left">
+            Send
+        </ion-button>
+    </form>
+</ion-content>
