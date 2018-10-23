@@ -8,8 +8,8 @@
 * **Akshay Bains** 
 
 ## Running the app
-*-run NPM install for installing the modules
-*-create a firebase account, add the connecting details of your project to the app.module.ts 
+* -run NPM install for installing the modules
+* -create a firebase account, add the connecting details of your project to the app.module.ts 
 
 ## License
 
